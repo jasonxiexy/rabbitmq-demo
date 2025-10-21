@@ -1,0 +1,16 @@
+server:
+    port: 8081
+
+spring:
+    application:
+        name: upstream-producer
+    rabbitmq:
+        host: localhost
+        port: 5672
+        username: guest
+        password: guest
+        template:
+            mandatory: true
+        listener:
+            simple:
+                default-requeue-rejected: false
